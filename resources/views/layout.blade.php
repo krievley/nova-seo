@@ -1,22 +1,22 @@
 <!DOCTYPE html>
 <html lang="{{ str_replace('_', '-', app()->getLocale()) }}">
 <head>
-    <title>When Pigs Fly</title>
+    <title>{{ $metaTag->title }}</title>
     <meta charset="utf-8">
     <meta name="viewport" content="width=device-width, initial-scale=1">
-    <meta name="description" content="A blog dedicated to the love of pigs.">
+    <meta name="description" content="{{ $metaTag->description }}">
     <meta name="keywords" content="when pigs fly,pigs,pig,blog,posts,post">
 
-    <meta property="og:title" content="When Pigs Fly">
-    <meta property="og:description" content="A blog dedicated to the love of pigs.">
+    <meta property="og:title" content="{{ $metaTag->title }}">
+    <meta property="og:description" content="{{ $metaTag->description }}">
     <meta property="og:url" content="{{ config('app.url') }}">
     <meta property="og:type" content="website">
-    <meta property="og:image" content="{{ asset('img/flying-pig.jpeg') }}">
+    <meta property="og:image" content="{{ asset('storage/'.$metaTag->image) }}">
 
-    <meta name="twitter:title" content="When Pigs Fly">
-    <meta name="twitter:description" content="A blog dedicated to the love of pigs.">
+    <meta name="twitter:title" content="{{ $metaTag->title }}">
+    <meta name="twitter:description" content="{{ $metaTag->description }}">
     <meta name="twitter:card" content="summary_large_image">
-    <meta name="twitter:image" content="{{ asset('img/flying-pig.jpeg') }}">
+    <meta name="twitter:image" content="{{ asset('storage/'.$metaTag->image) }}">
 
     <link href="{{ asset('css/app.css') }}" rel="stylesheet">
 </head>
