@@ -11,4 +11,13 @@
         </div>
     </div>
     <hr/>
+    <div class="flex items-center p-10">
+        <div class="bg-pink-200 mr-5">
+            <img class="object-contain h-20 w-full" src="{{ asset('img/pig-black.png') }}" alt="Pig Icon">
+        </div>
+        <div>
+            <p>Post Title</p>
+            <p>Post summary.</p>
+        </div>
+    </div>
 @endsection
