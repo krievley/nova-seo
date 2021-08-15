@@ -5,14 +5,13 @@
     <meta charset="utf-8">
     <meta name="viewport" content="width=device-width, initial-scale=1">
     <meta name="description" content="A blog dedicated to the love of pigs.">
+    <meta name="keywords" content="when pigs fly,pigs,pig,blog,posts,post">
 
     <meta property="og:title" content="When Pigs Fly">
     <meta property="og:description" content="A blog dedicated to the love of pigs.">
-    <meta property="og:url" content="http://www.whenpigsfly.com">
+    <meta property="og:url" content="{{ config('app.url') }}">
     <meta property="og:type" content="website">
     <meta property="og:image" content="{{ asset('img/flying-pig.jpeg') }}">
-    <meta property="og:image:width" content="500" />
-    <meta property="og:image:height" content="344" />
 
     <meta name="twitter:title" content="When Pigs Fly">
     <meta name="twitter:description" content="A blog dedicated to the love of pigs.">
