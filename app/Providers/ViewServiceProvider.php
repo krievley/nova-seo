@@ -21,11 +21,7 @@ class ViewServiceProvider extends ServiceProvider
                 return $view->with('metaTag', $metaTag);
             }
 
-            $defaultTag = new \stdClass();
-            $defaultTag->title = 'When Pigs Fly';
-            $defaultTag->description = 'A blog dedicated to the love of pigs.';
-            $defaultTag->keywords = 'when pigs fly,pigs,pig,blog,posts,post';
-            $defaultTag->image = 'flying-pig.jpeg';
+            $defaultTag = MetaTag::where('path', 'default')->first();
 
             return $view->with('metaTag', $defaultTag);
         });
