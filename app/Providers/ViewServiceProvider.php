@@ -13,7 +13,7 @@ class ViewServiceProvider extends ServiceProvider
     {
         View::composer('*', function ($view) {
             $parsed = parse_url(url()->current());
-            $currentPath = isset($parsed['path']) ? $parsed['path'] : '/';
+            $currentPath = $parsed['path'] ?? '/';
 
             $metaTag = MetaTag::where('path', $currentPath)->first();
 
